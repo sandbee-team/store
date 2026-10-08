@@ -1,0 +1,77 @@
+{
+  "name": "doc-extractor",
+  "version": "1.1.0",
+  "description": "Native document extractor (Aadhaar/PAN/Voter/DL/Ration) — SPS package: C++ N-API source + vendored per-platform prebuilds in one home. Consumers load dist/index.js via the core manager; producers build with the scripts below.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "private": true,
+  "license": "UNLICENSED",
+  "files": [
+    "dist",
+    "prebuilds",
+    "runtime",
+    "selfcheck",
+    "MANIFEST.json",
+    "THIRD-PARTY-NOTICES.md",
+    "selfcheck.js"
+  ],
+  "scripts": {
+    "fetch-deps": "node scripts/fetch-deps.js",
+    "build": "node scripts/fetch-deps.js && node-gyp rebuild && node scripts/postbuild.js",
+    "rebuild": "node-gyp rebuild && node scripts/postbuild.js",
+    "postbuild-copy": "node scripts/postbuild.js",
+    "clean": "node-gyp clean",
+    "build:neural": "node-gyp configure && node-gyp build --target=neural_spike",
+    "test:neural": "node test/neural/parity.test.js",
+    "test:neural:ppocr": "node test/neural/parity_ppocr.test.js",
+    "test:v1": "node test/v1/regression.test.js",
+    "test:p1": "node test/p1/hybrid.test.js",
+    "test:p2": "node test/p2/voter.test.js",
+    "test:p3": "node test/p3/dl.test.js",
+    "test:p4": "node test/p4/ration.test.js",
+    "test:p8": "node test/p8/passport.test.js",
+    "test:queue": "node test/p3/queue_churn.test.js",
+    "test:soak": "node test/p1/soak.test.js",
+    "test:golden": "node test/ab/check_golden.js",
+    "snapshot:golden": "node test/ab/snapshot_golden.js",
+    "test:conformance": "node test/conformance.test.js",
+    "test:batch": "node test/batch/merge.test.js && node test/batch/batch.test.js && node test/batch/conformance-batch.test.js",
+    "gen:voter-corpus": "python test/p2/gen_voter_corpus.py",
+    "gen:dl-corpus": "python test/p3/gen_dl_corpus.py",
+    "gen:ration-corpus": "python test/p4/gen_ration_corpus.py",
+    "gen:passport-corpus": "python test/p8/gen_passport_corpus.py",
+    "scan:imports": "node scripts/check-imports.js",
+    "package:private": "node scripts/package-private.js",
+    "test": "node test/v1/regression.test.js && node test/p1/hybrid.test.js && node test/p2/voter.test.js && node test/p3/dl.test.js && node test/p4/ration.test.js && node test/p8/passport.test.js && node test/pan/labels.test.js && node test/p3/queue_churn.test.js && node test/neural/parity.test.js && node test/ab/check_golden.js && node scripts/check-imports.js",
+    "report:real-corpus": "node scripts/real-corpus-report.js",
+    "test:pan": "node test/pan/labels.test.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "os": [
+    "win32",
+    "linux",
+    "darwin"
+  ],
+  "dependencies": {
+    "node-addon-api": "^8.3.0"
+  },
+  "devDependencies": {
+    "node-gyp": "^11.0.0"
+  },
+  "binary": {
+    "napi_versions": [
+      8
+    ]
+  },
+  "keywords": [
+    "aadhaar",
+    "pan",
+    "ocr",
+    "qr",
+    "native",
+    "napi",
+    "document-extraction"
+  ]
+}

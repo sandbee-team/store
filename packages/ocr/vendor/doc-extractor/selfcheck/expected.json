@@ -1,0 +1,9 @@
+{
+  "fixture": "aadhaar_hires.jpg",
+  "documentType": "AADHAAR",
+  "expect": {
+    "num": "834956103729",
+    "name": "Rahul Kumar Sharma",
+    "dob": "15/08/1990"
+  }
+}

@@ -1,0 +1,105 @@
+name: sandbee-platform
+services:
+  mongo:
+    image: mongo:8
+    restart: unless-stopped
+    ports: ["127.0.0.1:27024:27017"]
+    volumes: ["platform-mongo:/data/db"]
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 10s
+      timeout: 5s
+      retries: 8
+  mailpit:
+    image: axllent/mailpit:v1.29
+    restart: unless-stopped
+    ports: ["127.0.0.1:8029:8025", "127.0.0.1:1029:1025"]
+  app:
+    build: { context: ., target: platform }
+    restart: unless-stopped
+    ports: ["127.0.0.1:8094:3000"]
+    environment:
+      NODE_ENV: development
+      APP_URL: http://localhost:8094
+      HOST: 0.0.0.0
+      PORT: 3000
+      MONGODB_URI: mongodb://mongo:27017
+      MONGODB_DB: sandbee_platform
+      SESSION_SECRET: ${SESSION_SECRET:?Run npm run setup first}
+      AUTH_RATE_LIMIT: 100
+      LICENSE_KEY_FILE: /run/keys/license-private.pem
+      SMTP_HOST: mailpit
+      SMTP_PORT: 1025
+      GST_SERVICE_URL: http://gst:3000
+      GST_PUBLIC_URL: http://localhost:8095
+      OCR_DEMO_PUBLIC_URL: http://localhost:8096
+      GST_SERVICE_SECRET: ${GST_SERVICE_SECRET:?Run setup}
+      OCR_DEMO_SERVICE_SECRET: ${OCR_DEMO_SERVICE_SECRET:?Run setup}
+      OCR_LICENSE_SERVICE_SECRET: ${OCR_LICENSE_SERVICE_SECRET:?Run setup}
+      OCR_LICENSE_URL: http://localhost:8097
+    volumes: ["./.local/license-private.pem:/run/keys/license-private.pem:ro"]
+    depends_on:
+      mongo: { condition: service_healthy }
+      mailpit: { condition: service_started }
+    mem_limit: 2g
+    cpus: 2
+    pids_limit: 160
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: ["ALL"]
+  gst:
+    build: { context: ., target: gst-service }
+    restart: unless-stopped
+    ports: ["127.0.0.1:8095:3000"]
+    environment:
+      NODE_ENV: development
+      HOST: 0.0.0.0
+      PORT: 3000
+      CONTROL_URL: http://app:3000
+      SERVICE_SECRET: ${GST_SERVICE_SECRET:?Run setup}
+      MONGODB_URI: mongodb://mongo:27017
+      MONGODB_DB: sandbee_gst_data
+      GST_PYTHON: python3
+    depends_on:
+      app: { condition: service_healthy }
+    mem_limit: 1g
+    cpus: 1
+    pids_limit: 120
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: ["ALL"]
+  ocr-license:
+    build: { context: ., target: ocr-license }
+    restart: unless-stopped
+    ports: ["127.0.0.1:8097:3000"]
+    environment:
+      NODE_ENV: development
+      HOST: 0.0.0.0
+      PORT: 3000
+      CONTROL_URL: http://app:3000
+      SERVICE_SECRET: ${OCR_LICENSE_SERVICE_SECRET:?Run setup}
+    depends_on:
+      app: { condition: service_healthy }
+    mem_limit: 256m
+    cpus: 1
+    pids_limit: 64
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: ["ALL"]
+  ocr-demo:
+    build: { context: ., target: ocr-demo }
+    restart: unless-stopped
+    ports: ["127.0.0.1:8096:3000"]
+    environment:
+      NODE_ENV: development
+      HOST: 0.0.0.0
+      PORT: 3000
+      CONTROL_URL: http://app:3000
+      CONSOLE_ORIGIN: http://localhost:8094
+      SERVICE_SECRET: ${OCR_DEMO_SERVICE_SECRET:?Run setup}
+    depends_on:
+      app: { condition: service_healthy }
+    mem_limit: 1g
+    cpus: 1
+    pids_limit: 120
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: ["ALL"]
+volumes:
+  platform-mongo:

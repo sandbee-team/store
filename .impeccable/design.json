@@ -1,0 +1,627 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-24T18:12:41.637885+00:00",
+  "title": "Design System: Sandbee Store",
+  "extensions": {
+    "colorMeta": {
+      "canvas": {
+        "role": "neutral",
+        "displayName": "Canvas",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95.00% 0.00000 0.00)"
+        ],
+        "rampPurpose": "Synthesized panel swatches only; not normative application colors.",
+        "source": "frontend/src/styles/tokens.css"
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "tonalRamp": [
+          "oklch(15.00% 0.00287 264.54)",
+          "oklch(26.43% 0.00287 264.54)",
+          "oklch(37.86% 0.00287 264.54)",
+          "oklch(49.29% 0.00287 264.54)",
+          "oklch(60.71% 0.00287 264.54)",
+          "oklch(72.14% 0.00287 264.54)",
+          "oklch(83.57% 0.00287 264.54)",
+          "oklch(95.00% 0.00287 264.54)"
+        ],
+        "rampPurpose": "Synthesized panel swatches only; not normative application colors.",
+        "source": "frontend/src/styles/tokens.css"
+      },
+      "surface-hover": {
+        "role": "neutral",
+        "displayName": "Surface Hover",
+        "tonalRamp": [
+          "oklch(15.00% 0.00456 258.32)",
+          "oklch(26.43% 0.00456 258.32)",
+          "oklch(37.86% 0.00456 258.32)",
+          "oklch(49.29% 0.00456 258.32)",
+          "oklch(60.71% 0.00456 258.32)",
+          "oklch(72.14% 0.00456 258.32)",
+          "oklch(83.57% 0.00456 258.32)",
+          "oklch(95.00% 0.00456 258.32)"
+        ],
+        "rampPurpose": "Synthesized panel swatches only; not normative application colors.",
+        "source": "frontend/src/styles/tokens.css"
+      },
+      "surface-selected": {
+        "role": "primary",
+        "displayName": "Surface Selected",
+        "tonalRamp": [
+          "oklch(15.00% 0.01737 264.49)",
+          "oklch(26.43% 0.01737 264.49)",
+          "oklch(37.86% 0.01737 264.49)",
+          "oklch(49.29% 0.01737 264.49)",
+          "oklch(60.71% 0.01737 264.49)",
+          "oklch(72.14% 0.01737 264.49)",
+          "oklch(83.57% 0.01737 264.49)",
+          "oklch(95.00% 0.01737 264.49)"
+        ],
+        "rampPurpose": "Synthesized panel swatches only; not normative application colors.",
+        "source": "frontend/src/styles/tokens.css"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.01442 261.67)",
+          "oklch(26.43% 0.01442 261.67)",
+          "oklch(37.86% 0.01442 261.67)",
+          "oklch(49.29% 0.01442 261.67)",
+          "oklch(60.71% 0.01442 261.67)",
+          "oklch(72.14% 0.01442 261.67)",
+          "oklch(83.57% 0.01442 261.67)",
+          "oklch(95.00% 0.01442 261.67)"
+        ],
+        "rampPurpose": "Synthesized panel swatches only; not normative application colors.",
+        "source": "frontend/src/styles/tokens.css"
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "tonalRamp": [
+          "oklch(15.00% 0.02507 259.18)",
+          "oklch(26.43% 0.02507 259.18)",
+          "oklch(37.86% 0.02507 259.18)",
+          "oklch(49.29% 0.02507 259.18)",
+          "oklch(60.71% 0.02507 259.18)",
+          "oklch(72.14% 0.02507 259.18)",
+          "oklch(83.57% 0.02507 259.18)",
+          "oklch(95.00% 0.02507 259.18)"
+        ],
+        "rampPurpose": "Synthesized panel swatches only; not normative application colors.",
+        "source": "frontend/src/styles/tokens.css"
+      },
+      "subtle": {
+        "role": "neutral",
+        "displayName": "Subtle",
+        "tonalRamp": [
+          "oklch(15.00% 0.02168 255.60)",
+          "oklch(26.43% 0.02168 255.60)",
+          "oklch(37.86% 0.02168 255.60)",
+          "oklch(49.29% 0.02168 255.60)",
+          "oklch(60.71% 0.02168 255.60)",
+          "oklch(72.14% 0.02168 255.60)",
+          "oklch(83.57% 0.02168 255.60)",
+          "oklch(95.00% 0.02168 255.60)"
+        ],
+        "rampPurpose": "Synthesized panel swatches only; not normative application colors.",
+        "source": "frontend/src/styles/tokens.css"
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "tonalRamp": [
+          "oklch(15.00% 0.00806 253.86)",
+          "oklch(26.43% 0.00806 253.86)",
+          "oklch(37.86% 0.00806 253.86)",
+          "oklch(49.29% 0.00806 253.86)",
+          "oklch(60.71% 0.00806 253.86)",
+          "oklch(72.14% 0.00806 253.86)",
+          "oklch(83.57% 0.00806 253.86)",
+          "oklch(95.00% 0.00806 253.86)"
+        ],
+        "rampPurpose": "Synthesized panel swatches only; not normative application colors.",
+        "source": "frontend/src/styles/tokens.css"
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Line Strong",
+        "tonalRamp": [
+          "oklch(15.00% 0.01929 258.36)",
+          "oklch(26.43% 0.01929 258.36)",
+          "oklch(37.86% 0.01929 258.36)",
+          "oklch(49.29% 0.01929 258.36)",
+          "oklch(60.71% 0.01929 258.36)",
+          "oklch(72.14% 0.01929 258.36)",
+          "oklch(83.57% 0.01929 258.36)",
+          "oklch(95.00% 0.01929 258.36)"
+        ],
+        "rampPurpose": "Synthesized panel swatches only; not normative application colors.",
+        "source": "frontend/src/styles/tokens.css"
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Accent",
+        "tonalRamp": [
+          "oklch(15.00% 0.17690 262.23)",
+          "oklch(26.43% 0.17690 262.23)",
+          "oklch(37.86% 0.17690 262.23)",
+          "oklch(49.29% 0.17690 262.23)",
+          "oklch(60.71% 0.17690 262.23)",
+          "oklch(72.14% 0.17690 262.23)",
+          "oklch(83.57% 0.17690 262.23)",
+          "oklch(95.00% 0.17690 262.23)"
+        ],
+        "rampPurpose": "Synthesized panel swatches only; not normative application colors.",
+        "source": "frontend/src/styles/tokens.css"
+      },
+      "accent-hover": {
+        "role": "primary",
+        "displayName": "Accent Hover",
+        "tonalRamp": [
+          "oklch(15.00% 0.15732 262.12)",
+          "oklch(26.43% 0.15732 262.12)",
+          "oklch(37.86% 0.15732 262.12)",
+          "oklch(49.29% 0.15732 262.12)",
+          "oklch(60.71% 0.15732 262.12)",
+          "oklch(72.14% 0.15732 262.12)",
+          "oklch(83.57% 0.15732 262.12)",
+          "oklch(95.00% 0.15732 262.12)"
+        ],
+        "rampPurpose": "Synthesized panel swatches only; not normative application colors.",
+        "source": "frontend/src/styles/tokens.css"
+      },
+      "accent-ink": {
+        "role": "primary",
+        "displayName": "Accent Ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95.00% 0.00000 0.00)"
+        ],
+        "rampPurpose": "Synthesized panel swatches only; not normative application colors.",
+        "source": "frontend/src/styles/tokens.css"
+      },
+      "success": {
+        "role": "semantic",
+        "displayName": "Success",
+        "tonalRamp": [
+          "oklch(15.00% 0.10257 154.20)",
+          "oklch(26.43% 0.10257 154.20)",
+          "oklch(37.86% 0.10257 154.20)",
+          "oklch(49.29% 0.10257 154.20)",
+          "oklch(60.71% 0.10257 154.20)",
+          "oklch(72.14% 0.10257 154.20)",
+          "oklch(83.57% 0.10257 154.20)",
+          "oklch(95.00% 0.10257 154.20)"
+        ],
+        "rampPurpose": "Synthesized panel swatches only; not normative application colors.",
+        "source": "frontend/src/styles/tokens.css"
+      },
+      "success-bg": {
+        "role": "semantic",
+        "displayName": "Success Bg",
+        "tonalRamp": [
+          "oklch(15.00% 0.01402 155.59)",
+          "oklch(26.43% 0.01402 155.59)",
+          "oklch(37.86% 0.01402 155.59)",
+          "oklch(49.29% 0.01402 155.59)",
+          "oklch(60.71% 0.01402 155.59)",
+          "oklch(72.14% 0.01402 155.59)",
+          "oklch(83.57% 0.01402 155.59)",
+          "oklch(95.00% 0.01402 155.59)"
+        ],
+        "rampPurpose": "Synthesized panel swatches only; not normative application colors.",
+        "source": "frontend/src/styles/tokens.css"
+      },
+      "warning": {
+        "role": "semantic",
+        "displayName": "Warning",
+        "tonalRamp": [
+          "oklch(15.00% 0.10055 69.70)",
+          "oklch(26.43% 0.10055 69.70)",
+          "oklch(37.86% 0.10055 69.70)",
+          "oklch(49.29% 0.10055 69.70)",
+          "oklch(60.71% 0.10055 69.70)",
+          "oklch(72.14% 0.10055 69.70)",
+          "oklch(83.57% 0.10055 69.70)",
+          "oklch(95.00% 0.10055 69.70)"
+        ],
+        "rampPurpose": "Synthesized panel swatches only; not normative application colors.",
+        "source": "frontend/src/styles/tokens.css"
+      },
+      "warning-bg": {
+        "role": "semantic",
+        "displayName": "Warning Bg",
+        "tonalRamp": [
+          "oklch(15.00% 0.02317 82.12)",
+          "oklch(26.43% 0.02317 82.12)",
+          "oklch(37.86% 0.02317 82.12)",
+          "oklch(49.29% 0.02317 82.12)",
+          "oklch(60.71% 0.02317 82.12)",
+          "oklch(72.14% 0.02317 82.12)",
+          "oklch(83.57% 0.02317 82.12)",
+          "oklch(95.00% 0.02317 82.12)"
+        ],
+        "rampPurpose": "Synthesized panel swatches only; not normative application colors.",
+        "source": "frontend/src/styles/tokens.css"
+      },
+      "danger": {
+        "role": "semantic",
+        "displayName": "Danger",
+        "tonalRamp": [
+          "oklch(15.00% 0.16592 21.20)",
+          "oklch(26.43% 0.16592 21.20)",
+          "oklch(37.86% 0.16592 21.20)",
+          "oklch(49.29% 0.16592 21.20)",
+          "oklch(60.71% 0.16592 21.20)",
+          "oklch(72.14% 0.16592 21.20)",
+          "oklch(83.57% 0.16592 21.20)",
+          "oklch(95.00% 0.16592 21.20)"
+        ],
+        "rampPurpose": "Synthesized panel swatches only; not normative application colors.",
+        "source": "frontend/src/styles/tokens.css"
+      },
+      "danger-bg": {
+        "role": "semantic",
+        "displayName": "Danger Bg",
+        "tonalRamp": [
+          "oklch(15.00% 0.01627 12.78)",
+          "oklch(26.43% 0.01627 12.78)",
+          "oklch(37.86% 0.01627 12.78)",
+          "oklch(49.29% 0.01627 12.78)",
+          "oklch(60.71% 0.01627 12.78)",
+          "oklch(72.14% 0.01627 12.78)",
+          "oklch(83.57% 0.01627 12.78)",
+          "oklch(95.00% 0.01627 12.78)"
+        ],
+        "rampPurpose": "Synthesized panel swatches only; not normative application colors.",
+        "source": "frontend/src/styles/tokens.css"
+      },
+      "chart-demo": {
+        "role": "semantic",
+        "displayName": "OCR and Successful Outcome Teal",
+        "tonalRamp": [
+          "oklch(15.00% 0.09058 186.94)",
+          "oklch(26.43% 0.09058 186.94)",
+          "oklch(37.86% 0.09058 186.94)",
+          "oklch(49.29% 0.09058 186.94)",
+          "oklch(60.71% 0.09058 186.94)",
+          "oklch(72.14% 0.09058 186.94)",
+          "oklch(83.57% 0.09058 186.94)",
+          "oklch(95.00% 0.09058 186.94)"
+        ],
+        "rampPurpose": "Synthesized panel swatches only; not normative application colors.",
+        "source": "frontend/src/components/charts/ActivityChart.jsx; frontend/src/styles/interaction.css"
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Extracted console headline role.",
+        "source": "frontend/src/styles/base.css; frontend/src/styles/layout.css"
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Extracted console title role.",
+        "source": "frontend/src/styles/base.css; frontend/src/styles/layout.css"
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Extracted console body role.",
+        "source": "frontend/src/styles/base.css; frontend/src/styles/layout.css"
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Extracted console label role.",
+        "source": "frontend/src/styles/base.css; frontend/src/styles/layout.css"
+      },
+      "navigation": {
+        "displayName": "Navigation",
+        "purpose": "Extracted console navigation role.",
+        "source": "frontend/src/styles/base.css; frontend/src/styles/layout.css"
+      },
+      "metric": {
+        "displayName": "Metric",
+        "purpose": "Extracted console metric role.",
+        "source": "frontend/src/styles/base.css; frontend/src/styles/layout.css"
+      },
+      "code": {
+        "displayName": "Code",
+        "purpose": "Extracted console code role.",
+        "source": "frontend/src/styles/base.css; frontend/src/styles/layout.css"
+      },
+      "reading-body": {
+        "displayName": "Reading Body",
+        "purpose": "Intentional public documentation reading mode.",
+        "source": "frontend/public/developers.css"
+      },
+      "reading-headline": {
+        "displayName": "Reading Headline",
+        "purpose": "Intentional public documentation reading mode.",
+        "source": "frontend/public/developers.css"
+      }
+    },
+    "shadows": [
+      {
+        "name": "shadow-popover",
+        "value": "0 8px 28px #20242b1f",
+        "purpose": "Native modal elevation.",
+        "source": "frontend/src/styles/tokens.css"
+      },
+      {
+        "name": "segmented-selection",
+        "value": "0 1px 3px #20242b14",
+        "purpose": "Selected catalog availability control.",
+        "source": "frontend/src/styles/layout.css"
+      },
+      {
+        "name": "select-menu",
+        "value": "0 8px 30px #20242b29",
+        "purpose": "Shared Select popover.",
+        "source": "frontend/src/styles/interaction.css"
+      }
+    ],
+    "motion": [
+      {
+        "name": "motion-fast",
+        "value": "150ms",
+        "purpose": "Control background and border feedback."
+      },
+      {
+        "name": "motion-normal",
+        "value": "200ms",
+        "purpose": "Drawer transform and dialog entry."
+      },
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Drawer and dialog easing."
+      },
+      {
+        "name": "dialog-in",
+        "value": "translateY(6px) to translateY(0)",
+        "purpose": "Native dialog entry."
+      },
+      {
+        "name": "spinner",
+        "value": "1s linear infinite",
+        "purpose": "Busy progress indicator."
+      },
+      {
+        "name": "ocr-scan",
+        "value": "1.5s ease-in-out infinite alternate; translateY(60px)",
+        "purpose": "Active OCR processing only."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation-duration:0.01ms;animation-iteration-count:1;transition-duration:0.01ms;scroll-behavior:auto",
+        "purpose": "Console prefers-reduced-motion override."
+      },
+      {
+        "name": "menu-reveal",
+        "value": "150ms cubic-bezier(0.22, 1, 0.36, 1); opacity:0.5 to 1; translateY(-3px) to translateY(0)",
+        "purpose": "Shared Select entry."
+      },
+      {
+        "name": "page-settle",
+        "value": "180ms cubic-bezier(0.22, 1, 0.36, 1); translateY(3px) to translateY(0)",
+        "purpose": "Direct content div entry."
+      },
+      {
+        "name": "catalog-lift",
+        "value": "translateY(-2px); 180ms cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Catalog hover; removed under reduced motion."
+      },
+      {
+        "name": "chart-change",
+        "value": "450ms; disabled under prefers-reduced-motion",
+        "purpose": "Recharts series change."
+      },
+      {
+        "name": "brand-wings",
+        "value": "900ms cubic-bezier(0.22, 1, 0.36, 1) infinite alternate; scaleY(0.8) to scaleY(1)",
+        "purpose": "Pending loader only."
+      },
+      {
+        "name": "brand-body",
+        "value": "1800ms ease-in-out infinite; midpoint fill:var(--accent)",
+        "purpose": "Pending loader only."
+      },
+      {
+        "name": "brand-track",
+        "value": "1.5s cubic-bezier(0.22, 1, 0.36, 1) infinite; translateX(-120%) to translateX(390%)",
+        "purpose": "Pending loader only."
+      },
+      {
+        "name": "interaction-reduced-motion",
+        "value": "animation:none;transition:none;catalog-hover-transform:none",
+        "purpose": "Later interaction override for loader, menu, catalog and page content."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1150px"
+      },
+      {
+        "name": "report-stack",
+        "value": "1120px"
+      },
+      {
+        "name": "dashboard-stack",
+        "value": "1000px"
+      },
+      {
+        "name": "store-drawer",
+        "value": "800px"
+      },
+      {
+        "name": "public-reading-stack",
+        "value": "760px"
+      },
+      {
+        "name": "auth-docs-metrics",
+        "value": "750px"
+      },
+      {
+        "name": "detail-stack",
+        "value": "650px"
+      },
+      {
+        "name": "small-phone",
+        "value": "600px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Existing primary action variant.",
+      "html": "<button type=\"button\" class=\"ds-button-primary\">Save changes</button>",
+      "css": ".ds-button-primary{font-family:var(--font-ui,\"IBM Plex Sans\",\"Segoe UI\",sans-serif);font-size:13px;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:32px;padding:6px 11px;border:1px solid transparent;border-radius:var(--radius,6px);font-weight:500;line-height:1.35;background:var(--accent,#2459c4);color:var(--accent-ink,#ffffff);cursor:pointer;transition:background var(--motion-fast,150ms),border-color var(--motion-fast,150ms);}.ds-button-primary:hover:not(:disabled){background:var(--accent-hover,#1947a3);}.ds-button-primary:focus-visible{outline:2px solid var(--accent,#2459c4);outline-offset:3px;}.ds-button-primary:disabled{opacity:.55;cursor:not-allowed;}@media(prefers-reduced-motion:reduce){.ds-button-primary{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}",
+      "source": "frontend/src/components/ui.jsx; frontend/src/styles/components.css"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Existing secondary action variant.",
+      "html": "<button type=\"button\" class=\"ds-button-secondary\">Open app</button>",
+      "css": ".ds-button-secondary{font-family:var(--font-ui,\"IBM Plex Sans\",\"Segoe UI\",sans-serif);font-size:13px;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:32px;padding:6px 11px;border:1px solid var(--line-strong,#aeb6c2);border-radius:var(--radius,6px);font-weight:500;line-height:1.35;background:var(--canvas,#ffffff);color:var(--ink,#20242b);cursor:pointer;transition:background var(--motion-fast,150ms),border-color var(--motion-fast,150ms);}.ds-button-secondary:hover:not(:disabled){background:var(--surface,#f7f8fa);}.ds-button-secondary:focus-visible{outline:2px solid var(--accent,#2459c4);outline-offset:3px;}.ds-button-secondary:disabled{opacity:.55;cursor:not-allowed;}@media(prefers-reduced-motion:reduce){.ds-button-secondary{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}",
+      "source": "frontend/src/components/ui.jsx; frontend/src/styles/components.css"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Existing ghost action variant.",
+      "html": "<button type=\"button\" class=\"ds-button-ghost\">Cancel</button>",
+      "css": ".ds-button-ghost{font-family:var(--font-ui,\"IBM Plex Sans\",\"Segoe UI\",sans-serif);font-size:13px;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:32px;padding:6px 11px;border:1px solid transparent;border-radius:var(--radius,6px);font-weight:500;line-height:1.35;background:transparent;color:var(--muted,#596270);cursor:pointer;transition:background var(--motion-fast,150ms),border-color var(--motion-fast,150ms);}.ds-button-ghost:hover:not(:disabled){background:var(--surface-hover,#eef0f3);}.ds-button-ghost:focus-visible{outline:2px solid var(--accent,#2459c4);outline-offset:3px;}.ds-button-ghost:disabled{opacity:.55;cursor:not-allowed;}@media(prefers-reduced-motion:reduce){.ds-button-ghost{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}",
+      "source": "frontend/src/components/ui.jsx; frontend/src/styles/components.css"
+    },
+    {
+      "name": "Danger Button",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "Existing danger variant; danger intentionally has no separate hover fill.",
+      "html": "<button type=\"button\" class=\"ds-button-danger\">Remove member</button>",
+      "css": ".ds-button-danger{font-family:var(--font-ui,\"IBM Plex Sans\",\"Segoe UI\",sans-serif);font-size:13px;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:32px;padding:6px 11px;border:1px solid transparent;border-radius:var(--radius,6px);font-weight:500;line-height:1.35;background:var(--danger,#b3313b);color:#ffffff;cursor:pointer;transition:background var(--motion-fast,150ms),border-color var(--motion-fast,150ms);}.ds-button-danger:focus-visible{outline:2px solid var(--accent,#2459c4);outline-offset:3px;}.ds-button-danger:disabled{opacity:.55;cursor:not-allowed;}@media(prefers-reduced-motion:reduce){.ds-button-danger{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}",
+      "source": "frontend/src/components/ui.jsx; frontend/src/styles/components.css"
+    },
+    {
+      "name": "Labeled Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Programmatically labeled field with supporting hint.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-name\">Name</label><input id=\"ds-name\" aria-describedby=\"ds-name-hint\" placeholder=\"Your name\"><small id=\"ds-name-hint\">Shown in your workspace.</small></div>",
+      "css": ".ds-field{font-family:var(--font-ui,\"IBM Plex Sans\",\"Segoe UI\",sans-serif);font-size:13px;display:grid;gap:5px;max-width:320px;color:var(--ink,#20242b);line-height:1.5}.ds-field label{font-weight:500}.ds-field input{font-family:var(--font-ui,\"IBM Plex Sans\",\"Segoe UI\",sans-serif);font-size:13px;box-sizing:border-box;width:100%;min-height:34px;padding:6px 10px;border:1px solid var(--line-strong,#aeb6c2);border-radius:var(--radius,6px);background:var(--canvas,#ffffff);color:var(--ink,#20242b);caret-color:var(--accent,#2459c4)}.ds-field input:focus{border-color:var(--accent,#2459c4)}.ds-field input:focus-visible{outline:2px solid var(--accent,#2459c4);outline-offset:3px;}.ds-field input::placeholder{color:var(--subtle,#68717d);opacity:1}.ds-field small{font-size:12px;color:var(--muted,#596270)}",
+      "source": "frontend/src/components/ui.jsx; frontend/src/styles/components.css"
+    },
+    {
+      "name": "Global Navigation",
+      "kind": "nav",
+      "refersTo": "navigation-active",
+      "description": "Selected global destination on a neutral rail; source uses Lucide Grid2X2.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"/apps\" aria-current=\"page\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect width=\"7\" height=\"7\" x=\"3\" y=\"3\" rx=\"1\"/><rect width=\"7\" height=\"7\" x=\"14\" y=\"3\" rx=\"1\"/><rect width=\"7\" height=\"7\" x=\"14\" y=\"14\" rx=\"1\"/><rect width=\"7\" height=\"7\" x=\"3\" y=\"14\" rx=\"1\"/></svg><span>Apps</span></a><a href=\"/reports\">Reports</a></nav>",
+      "css": ".ds-nav{font-family:var(--font-ui,\"IBM Plex Sans\",\"Segoe UI\",sans-serif);font-size:13px;display:grid;gap:4px;background:var(--surface,#f7f8fa);padding:16px 10px;width:164px}.ds-nav a{display:flex;align-items:center;gap:10px;min-height:36px;box-sizing:border-box;padding:9px 10px;border-radius:5px;color:var(--muted,#596270);font-size:12px;font-weight:500;line-height:1.5;text-decoration:none}.ds-nav a:hover{background:var(--surface-hover,#eef0f3);color:var(--ink,#20242b)}.ds-nav a[aria-current]{background:var(--surface-selected,#eaf0fc);color:var(--accent,#2459c4)}.ds-nav a:focus-visible{outline:2px solid var(--accent,#2459c4);outline-offset:3px;}",
+      "source": "frontend/src/layouts/ConsoleLayout.jsx; frontend/src/styles/layout.css"
+    },
+    {
+      "name": "Status Pill",
+      "kind": "chip",
+      "refersTo": "pill-success",
+      "description": "Noninteractive semantic status badge; no invented hover or focus state.",
+      "html": "<span class=\"ds-pill\">Enabled</span>",
+      "css": ".ds-pill{font-family:var(--font-ui,\"IBM Plex Sans\",\"Segoe UI\",sans-serif);font-size:13px;display:inline-flex;align-items:center;border-radius:4px;padding:2px 7px;font-size:11px;font-weight:500;line-height:1.7;white-space:nowrap;color:var(--success,#247044);background:var(--success-bg,#edf7f0)}",
+      "source": "frontend/src/components/ui.jsx; frontend/src/styles/components.css"
+    },
+    {
+      "name": "Section Panel",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "Flat section container with compact heading and description.",
+      "html": "<section class=\"ds-panel\"><h2>Workspace</h2><p>Manage access to your workspace.</p></section>",
+      "css": ".ds-panel{font-family:var(--font-ui,\"IBM Plex Sans\",\"Segoe UI\",sans-serif);font-size:13px;color:var(--ink,#20242b);line-height:1.5;border:1px solid var(--line,#dfe3e8);border-radius:var(--radius-panel,8px);padding:16px;background:var(--canvas,#ffffff);margin-bottom:20px;min-width:0}.ds-panel h2{margin:0;font-size:15px;font-weight:600;line-height:1.4}.ds-panel p{margin:4px 0 0;color:var(--muted,#596270)}@media(max-width:600px){.ds-panel{padding:15px}}",
+      "source": "frontend/src/components/ui/Section.jsx; frontend/src/styles/components.css; frontend/src/styles/layout.css"
+    },
+    {
+      "name": "Catalog Card",
+      "kind": "custom",
+      "refersTo": "catalog-card",
+      "description": "Category-grouped app card; only the linked name and action are interactive.",
+      "html": "<article class=\"ds-catalog\"><div class=\"ds-catalog-top\"><span class=\"ds-app-icon\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect width=\"7\" height=\"7\" x=\"3\" y=\"3\" rx=\"1\"/><rect width=\"7\" height=\"7\" x=\"14\" y=\"3\" rx=\"1\"/><rect width=\"7\" height=\"7\" x=\"14\" y=\"14\" rx=\"1\"/><rect width=\"7\" height=\"7\" x=\"3\" y=\"14\" rx=\"1\"/></svg></span><span class=\"ds-catalog-pill\">Enabled</span></div><a class=\"ds-catalog-name\" href=\"/apps/gst\">GSTIN API</a><p>Look up registered business details with a GST number.</p><div class=\"ds-catalog-bottom\"><span>Hosted API / Free</span><a href=\"/apps/gst\">Open app</a></div></article>",
+      "css": ".ds-catalog{font-family:var(--font-ui,\"IBM Plex Sans\",\"Segoe UI\",sans-serif);font-size:13px;color:var(--ink,#20242b);line-height:1.5;border:1px solid var(--line,#dfe3e8);border-radius:7px;padding:18px;min-width:0;transition:border-color var(--motion-fast,150ms),transform 180ms var(--ease,cubic-bezier(0.22,1,0.36,1))}.ds-catalog:hover{border-color:var(--line-strong,#aeb6c2);transform:translateY(-2px)}.ds-catalog-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}.ds-app-icon{display:grid;place-items:center;width:40px;height:40px;background:var(--surface,#f7f8fa);border:1px solid var(--line,#dfe3e8);border-radius:7px}.ds-catalog-pill{border-radius:4px;padding:2px 7px;font-size:11px;font-weight:500;line-height:1.7;background:var(--success-bg,#edf7f0);color:var(--success,#247044)}.ds-catalog-name{font-size:15px;font-weight:600;text-decoration:none;color:var(--ink,#20242b)}.ds-catalog-name:hover{color:var(--accent,#2459c4)}.ds-catalog p{margin:6px 0 20px;max-width:60ch;color:var(--muted,#596270)}.ds-catalog-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid var(--line,#dfe3e8);padding-top:14px}.ds-catalog-bottom>span{font-size:11px;color:var(--muted,#596270)}.ds-catalog-bottom>a{display:inline-flex;align-items:center;justify-content:center;min-height:32px;box-sizing:border-box;padding:6px 11px;border:1px solid var(--line-strong,#aeb6c2);border-radius:var(--radius,6px);font-size:12px;font-weight:500;line-height:1.35;background:var(--canvas,#ffffff);color:var(--ink,#20242b);text-decoration:none;transition:background var(--motion-fast,150ms)}.ds-catalog-bottom>a:hover{background:var(--surface,#f7f8fa)}.ds-catalog a:focus-visible{outline:2px solid var(--accent,#2459c4);outline-offset:3px;}@media(max-width:600px){.ds-catalog{padding:16px}}@media(prefers-reduced-motion:reduce){.ds-catalog,.ds-catalog-bottom>a{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}@media(prefers-reduced-motion:reduce){.ds-catalog{transition:none!important}.ds-catalog:hover{transform:none}}",
+      "source": "frontend/src/pages/Apps.jsx; frontend/src/styles/layout.css; frontend/src/styles/components.css; frontend/src/styles/interaction.css"
+    },
+    {
+      "name": "Shared Select",
+      "kind": "custom",
+      "refersTo": "select-trigger",
+      "description": "Rendered open-state styling specimen. Production Radix provides keyboard, portal, selection and form-value behavior; this dependency-free sample does not reimplement them.",
+      "html": "<div class=\"ds-select\"><label for=\"ds-period\">Report period</label><button id=\"ds-period\" class=\"ds-select-trigger\" type=\"button\" aria-haspopup=\"listbox\" aria-expanded=\"true\" aria-controls=\"ds-period-options\"><span>Last 30 days</span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg></button><div class=\"ds-select-menu\"><div id=\"ds-period-options\" class=\"ds-select-options\" role=\"listbox\" aria-label=\"Report period\"><div class=\"ds-select-option\" role=\"option\" aria-selected=\"false\" tabindex=\"0\">Last 7 days</div><div class=\"ds-select-option\" role=\"option\" aria-selected=\"true\" tabindex=\"0\">Last 30 days<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg></div><div class=\"ds-select-option\" role=\"option\" aria-selected=\"false\" tabindex=\"0\">Last 90 days</div></div></div></div>",
+      "css": ".ds-select{font-family:var(--font-ui,\"IBM Plex Sans\",\"Segoe UI\",sans-serif);font-size:13px;color:var(--ink,#20242b);line-height:1.5;width:220px}.ds-select label{display:block;font-weight:500;margin-bottom:5px}.ds-select-trigger{font-family:var(--font-ui,\"IBM Plex Sans\",\"Segoe UI\",sans-serif);font-size:13px;display:inline-flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:34px;max-width:100%;padding:6px 10px;border:1px solid var(--accent,#2459c4);border-radius:var(--radius,6px);background:var(--canvas,#ffffff);color:var(--ink,#20242b);text-align:left;cursor:pointer;transition:border-color var(--motion-fast,150ms),background var(--motion-fast,150ms)}.ds-select-trigger:hover{background:var(--surface,#f7f8fa)}.ds-select-trigger:focus-visible{outline:2px solid var(--accent,#2459c4);outline-offset:3px;}.ds-select-trigger>span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.ds-select-trigger>svg{color:var(--muted,#596270)}.ds-select-menu{margin-top:5px;max-width:calc(100vw - 24px);max-height:320px;overflow:hidden;border-radius:8px;background:var(--canvas,#ffffff);box-shadow:0 8px 30px #20242b29;animation:ds-menu-reveal 150ms var(--ease,cubic-bezier(0.22,1,0.36,1))}.ds-select-options{padding:5px}.ds-select-option{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:34px;box-sizing:border-box;padding:7px 9px;border-radius:4px;font-size:12px;cursor:pointer;outline:none}.ds-select-option:hover,.ds-select-option:focus-visible{background:var(--surface-selected,#eaf0fc);color:var(--accent,#2459c4)}.ds-select-option[aria-selected=\"true\"]{font-weight:500}.ds-select-option[aria-disabled=\"true\"]{opacity:.5;cursor:not-allowed}@keyframes ds-menu-reveal{from{opacity:.5;transform:translateY(-3px)}to{opacity:1;transform:translateY(0)}}@media(max-width:600px){.ds-select-option{min-height:40px}}@media(prefers-reduced-motion:reduce){.ds-select-menu{animation:none!important}.ds-select-trigger{transition-duration:.01ms!important}}",
+      "source": "frontend/src/components/ui/Select.jsx; frontend/src/styles/interaction.css"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Compact Service Store",
+    "overview": "Sandbee Store is a compact working console: a white workspace, light neutral navigation, graphite text and restrained blue actions. Global workspace tasks stay in the main rail; the active app receives its own adjacent menu. The interface makes service context, actual usage and the next permitted action readable without a promotional hero.\n\nThe system uses locally served IBM Plex, thin rules, small controls and flat panels. Public developer pages deliberately use a more spacious reading mode within the same visual identity. These rules describe the implemented code; the explicit Store revision supersedes the earlier workbook direction.",
+    "keyCharacteristics": [
+      "Two levels of navigation with a persistent workspace context.",
+      "Compact Plex typography, ruled data and restrained semantic color.",
+      "Shared styled controls, visible focus and motion tied to state.",
+      "Public documentation adapts the identity for sustained reading."
+    ],
+    "rules": [
+      {
+        "name": "The Action Blue Rule",
+        "body": "Use blue for actions, selection and the hosted GST chart series; use semantic green, amber and red for status rather than decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The Reading Mode Rule",
+        "body": "Keep console work compact; preserve the larger public documentation type and reading measure instead of forcing console density into long-form guides.",
+        "section": "typography"
+      },
+      {
+        "name": "The Two Contexts Rule",
+        "body": "Keep global workspace navigation separate from app navigation, with the workspace picker above the active work area.",
+        "section": "layout"
+      },
+      {
+        "name": "The Ruled Surface Rule",
+        "body": "Use borders and surface tone for ordinary panels; reserve shadows for overlays and the selected segmented control.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do reuse the shared Button, Field, Select, Section, Pill, Code, Modal, MetricStrip and Brand components.",
+      "Do retain labeled icon controls, visible focus, drawer focus management and reduced-motion behavior.",
+      "Do display actual usage, explicit empty states and a dash for unavailable rates.",
+      "Do keep category-grouped app cards and app-specific routes within the contextual navigation."
+    ],
+    "donts": [
+      "Don't return to oversized green/beige console surfaces or decorative heroes.",
+      "Don't invent traffic, customer counts, revenue, uptime, success rates, paid products or invoices.",
+      "Don't replace the intentional public documentation reading layout with the console rail shell.",
+      "Don't make collapsed navigation a source of authorization or hide its accessible labels."
+    ]
+  }
+}

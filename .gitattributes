@@ -1,0 +1,4 @@
+* text=auto eol=lf
+packages/ocr/vendor/** -text
+*.png -text
+*.tgz -text

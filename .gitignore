@@ -1,0 +1,19 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.local/
+frontend/dist/
+artifacts/*
+!artifacts/.gitkeep
+test-results/
+playwright-report/
+__pycache__/
+.venv/
+*.log
+
+# Locally installed design tooling; final design docs remain in source.
+.agents/
+.impeccable/config.local.json
+.impeccable/mocks/
+.impeccable/review/

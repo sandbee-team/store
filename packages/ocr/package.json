@@ -1,0 +1,44 @@
+{
+  "name": "@sandbee/ocr",
+  "version": "0.1.0",
+  "description": "Local document extraction for Node.js, authorized by a Sandbee license",
+  "type": "commonjs",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "require": "./src/index.js",
+      "default": "./src/index.js"
+    }
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "os": [
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "prepack": "node scripts/verify-runtime.js"
+  },
+  "files": [
+    "src",
+    "backend",
+    "vendor",
+    "README.md",
+    "scripts/verify-runtime.js"
+  ],
+  "dependencies": {
+    "sharp": "^0.35.4",
+    "zod": "^4.6.5"
+  }
+}

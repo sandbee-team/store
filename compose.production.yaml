@@ -1,0 +1,65 @@
+name: sandbee-platform
+services:
+  app:
+    image: sandbee-store:${RELEASE_TAG:-local}
+    build: { context: ., target: platform }
+    restart: unless-stopped
+    init: true
+    stop_grace_period: 80s
+    ports: ["127.0.0.1:${PLATFORM_HOST_PORT:-8094}:3000"]
+    environment:
+      NODE_ENV: production
+      HOST: 0.0.0.0
+      PORT: 3000
+      APP_URL: https://store.sandbee.in
+      MONGODB_URI: ${MONGODB_URI:?Set production MongoDB URI}
+      MONGODB_DB: ${MONGODB_DB:-sandbee_platform}
+      SESSION_SECRET: ${SESSION_SECRET:?Set a random session secret}
+      LICENSE_KEY_FILE: /run/keys/license-private.pem
+      GMAIL_USER: ${GMAIL_USER:?Set Gmail sender}
+      GMAIL_APP_PASSWORD: ${GMAIL_APP_PASSWORD:?Set Gmail app password}
+      MAIL_FROM: ${MAIL_FROM:-}
+      TRUST_PROXY: 1
+      GST_SERVICE_URL: ${GST_SERVICE_URL:?Set the remote GST HTTPS origin}
+      GST_PUBLIC_URL: https://gstapi.sandbee.in
+      OCR_DEMO_PUBLIC_URL: https://store.sandbee.in
+      OCR_LICENSE_URL: https://ocrapi.sandbee.in
+      OCR_LICENSE_SERVICE_SECRET: ${OCR_LICENSE_SERVICE_SECRET:?Set distinct license service credential}
+      OCR_NPM_PUBLISHED: ${OCR_NPM_PUBLISHED:-false}
+      GST_SERVICE_SECRET: ${GST_SERVICE_SECRET:?Set service credential}
+      OCR_DEMO_SERVICE_SECRET: ${OCR_DEMO_SERVICE_SECRET:?Set service credential}
+      LEGACY_MONGODB_URI: ${LEGACY_MONGODB_URI:-}
+      LEGACY_GST_DB: ${LEGACY_GST_DB:-}
+      LEGACY_OCR_DB: ${LEGACY_OCR_DB:-}
+    volumes: ["./.local/license-private.pem:/run/keys/license-private.pem:ro"]
+    mem_limit: 2g
+    cpus: 2
+    pids_limit: 160
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: ["ALL"]
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }
+  demo:
+    image: sandbee-store-demo:${RELEASE_TAG:-local}
+    build: { context: ., target: ocr-demo }
+    restart: unless-stopped
+    init: true
+    stop_grace_period: 70s
+    ports: ["127.0.0.1:${OCR_DEMO_HOST_PORT:-8096}:3000"]
+    environment:
+      NODE_ENV: production
+      HOST: 0.0.0.0
+      PORT: 3000
+      CONTROL_URL: https://store.sandbee.in
+      CONSOLE_ORIGIN: https://store.sandbee.in
+      SERVICE_SECRET: ${OCR_DEMO_SERVICE_SECRET:?Match Store demo credential}
+      TRUST_PROXY: 1
+    mem_limit: 1g
+    cpus: 1
+    pids_limit: 120
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: [ALL]
+    logging:
+      driver: json-file
+      options: { max-size: "10m", max-file: "3" }

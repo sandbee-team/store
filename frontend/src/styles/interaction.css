@@ -1,0 +1,443 @@
+.select-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 34px;
+  max-width: 100%;
+  padding: 6px 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--canvas);
+  font: inherit;
+  text-align: left;
+  transition:
+    border-color var(--motion-fast),
+    background var(--motion-fast);
+}
+.table-scroll {
+  position: relative;
+}
+.page-title > .pill {
+  align-self: flex-start;
+}
+.select-trigger > span:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.select-trigger > span:last-child {
+  display: flex;
+  flex-shrink: 0;
+  color: var(--muted);
+}
+.select-trigger:hover {
+  background: var(--surface);
+}
+.select-trigger[data-state="open"] {
+  border-color: var(--accent);
+}
+.select-trigger[data-placeholder] {
+  color: var(--muted);
+}
+.field .select-trigger {
+  width: 100%;
+}
+.select-menu {
+  z-index: 100;
+  min-width: var(--radix-select-trigger-width);
+  max-width: calc(100vw - 24px);
+  max-height: min(320px, var(--radix-select-content-available-height));
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--canvas);
+  box-shadow: 0 8px 30px #20242b29;
+  transform-origin: var(--radix-select-content-transform-origin);
+  animation: menu-reveal 150ms var(--ease);
+}
+.select-options {
+  padding: 5px;
+}
+.select-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  min-height: 34px;
+  padding: 7px 9px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  outline: none;
+}
+.select-option[data-highlighted] {
+  background: var(--surface-selected);
+  color: var(--accent);
+}
+.select-option[data-state="checked"] {
+  font-weight: 500;
+}
+.select-option[data-disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.select-scroll {
+  display: flex;
+  justify-content: center;
+  padding: 3px;
+  color: var(--muted);
+}
+.store-context .select-trigger {
+  min-width: 140px;
+  max-width: 220px;
+  border-color: transparent;
+  background: var(--surface);
+  font-size: 12px;
+}
+.brand-mark {
+  width: 27px;
+  height: 27px;
+  flex: 0 0 auto;
+}
+.brand-loader {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 48px 16px;
+  color: var(--muted);
+}
+.brand-loader-mark {
+  width: 76px;
+  height: 76px;
+  display: grid;
+  place-items: center;
+  background: var(--surface);
+  border-radius: 20px;
+  color: var(--ink);
+}
+.brand-loader-mark .brand-mark {
+  width: 44px;
+  height: 44px;
+}
+.brand-loader .brand-wings {
+  transform-origin: 32px 30px;
+  animation: wing-work 900ms var(--ease) infinite alternate;
+}
+.brand-loader .brand-body {
+  animation: body-work 1800ms ease-in-out infinite;
+}
+.brand-loader-track {
+  width: 100px;
+  height: 2px;
+  overflow: hidden;
+  background: var(--line);
+  border-radius: 2px;
+}
+.brand-loader-track i {
+  display: block;
+  width: 35%;
+  height: 100%;
+  background: var(--accent);
+  animation: work-track 1.5s var(--ease) infinite;
+}
+.brand-loader.compact {
+  min-height: 200px;
+}
+.brand-loader.compact .brand-loader-mark {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+}
+.store-main main > div {
+  animation: page-settle 180ms var(--ease);
+}
+.catalog-card {
+  transition:
+    border-color 150ms,
+    transform 180ms var(--ease);
+}
+.catalog-card:hover {
+  transform: translateY(-2px);
+}
+.catalog-card-bottom > span {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.billing-overview {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 16px;
+}
+.billing-balance {
+  background: var(--surface);
+}
+.billing-heading {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--muted);
+}
+.billing-balance > strong {
+  display: block;
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -1.5px;
+  margin: 20px 0 10px;
+  font-variant-numeric: tabular-nums;
+}
+.billing-assurance {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 24px;
+  color: var(--success);
+  font-size: 12px;
+}
+.invoice-empty {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+  color: var(--muted);
+}
+.invoice-empty h3 {
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.dashboard-billing {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.dashboard-billing strong {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--ink);
+}
+.dashboard-billing span {
+  font-size: 12px;
+  color: var(--muted);
+}
+.dashboard-billing ~ .text-link {
+  margin-top: 15px;
+}
+.report-chart-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2.1fr) minmax(270px, 1fr);
+  gap: 16px;
+}
+.chart-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0 0 15px;
+  font-size: 12px;
+}
+.chart-toolbar .segmented {
+  padding: 2px;
+}
+.chart-toolbar button {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  min-height: 26px;
+  padding: 3px 7px;
+  font-size: 11px;
+}
+.usage-chart .chart-toolbar svg {
+  width: 14px;
+  height: 14px;
+}
+.activity-plot,
+.chart-loading {
+  height: 242px;
+  width: 100%;
+  min-width: 0;
+}
+.chart-loading {
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  background: var(--surface);
+}
+.legend-demo {
+  background: #138078;
+}
+.chart-tooltip {
+  min-width: 166px;
+  padding: 12px 14px;
+  background: var(--canvas);
+  box-shadow: var(--shadow-popover);
+  border-radius: 7px;
+  font-size: 12px;
+}
+.chart-tooltip > strong {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.chart-tooltip > div,
+.chart-tooltip > div > span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.chart-tooltip > div {
+  justify-content: space-between;
+  margin-top: 5px;
+}
+.chart-tooltip b {
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+.outcome-bar {
+  display: flex;
+  height: 12px;
+  gap: 3px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 24px 0;
+  background: var(--surface-hover);
+}
+.outcome-bar .success {
+  background: #138078;
+}
+.outcome-bar .failed {
+  background: var(--danger);
+}
+.outcome-bar .pending {
+  background: var(--line-strong);
+}
+.outcome-list {
+  margin: 0;
+}
+.outcome-list > div,
+.outcome-list dt,
+.outcome-list dd {
+  display: flex;
+  align-items: center;
+}
+.outcome-list > div {
+  justify-content: space-between;
+  padding: 10px 0;
+  gap: 10px;
+  border-bottom: 1px solid var(--line);
+}
+.outcome-list dt {
+  gap: 7px;
+  color: var(--muted);
+  font-size: 12px;
+}
+.outcome-list dd {
+  gap: 10px;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+.outcome-list small {
+  color: var(--muted);
+  min-width: 38px;
+  font-size: 11px;
+  text-align: right;
+}
+.report-highlight {
+  display: flex;
+  gap: 9px;
+  margin-top: 20px;
+}
+.report-highlight > svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.report-highlight strong {
+  font-size: 12px;
+  font-weight: 500;
+}
+.report-highlight p {
+  margin-top: 4px;
+  font-size: 11px;
+}
+.app-status-row > div > .pill:last-child {
+  display: inline-flex;
+}
+@keyframes menu-reveal {
+  from {
+    opacity: 0.5;
+    transform: translateY(-3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes page-settle {
+  from {
+    transform: translateY(3px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes wing-work {
+  from {
+    transform: scaleY(0.8);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+@keyframes body-work {
+  50% {
+    fill: var(--accent);
+  }
+}
+@keyframes work-track {
+  from {
+    transform: translateX(-120%);
+  }
+  to {
+    transform: translateX(390%);
+  }
+}
+@media (max-width: 1120px) {
+  .report-chart-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .billing-overview {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  .store-context .select-trigger {
+    min-width: 0;
+    max-width: 170px;
+  }
+  .activity-plot,
+  .chart-loading {
+    height: 220px;
+  }
+  .select-option {
+    min-height: 40px;
+  }
+  .billing-balance > strong {
+    font-size: 36px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-loader *,
+  .catalog-card,
+  .select-menu,
+  .store-main main > div {
+    animation: none !important;
+    transition: none !important;
+  }
+  .catalog-card:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,118 @@
+'use strict';
+const catalog = [
+  {
+    id: 'AADHAAR',
+    name: 'Aadhaar',
+    short: 'Resident identity',
+    identifier: 'aadhaarNumber',
+    person: 'name',
+    fields: [
+      'aadhaarNumber',
+      'name',
+      'dob',
+      'yearOfBirth',
+      'gender',
+      'address',
+      'maskedAadhaarNumber',
+      'vid',
+    ],
+  },
+  {
+    id: 'PAN',
+    name: 'PAN card',
+    short: 'Tax identity',
+    identifier: 'panNumber',
+    person: 'name',
+    fields: ['panNumber', 'name', 'fatherName', 'dob'],
+  },
+  {
+    id: 'VOTER_ID',
+    name: 'Voter ID',
+    short: 'Electoral identity',
+    identifier: 'epicNumber',
+    person: 'name',
+    fields: [
+      'epicNumber',
+      'name',
+      'relationName',
+      'relationType',
+      'gender',
+      'dob',
+      'age',
+      'address',
+      'issueDate',
+      'downloadDate',
+    ],
+  },
+  {
+    id: 'DRIVING_LICENSE',
+    name: 'Driving licence',
+    short: 'Licence details',
+    identifier: 'dlNumber',
+    person: 'name',
+    fields: [
+      'dlNumber',
+      'name',
+      'relationName',
+      'relationType',
+      'dob',
+      'address',
+      'issueDate',
+      'validityNonTransport',
+      'validityTransport',
+      'vehicleClasses',
+      'badgeNo',
+    ],
+  },
+  {
+    id: 'RATION_CARD',
+    name: 'Ration card',
+    short: 'Household details',
+    identifier: 'cardNumber',
+    person: 'headOfFamily',
+    fields: [
+      'cardNumber',
+      'cardType',
+      'headOfFamily',
+      'memberCount',
+      'members',
+      'fpsDetails',
+      'address',
+      'state',
+      'issueDate',
+      'validUpto',
+    ],
+  },
+  {
+    id: 'PASSPORT',
+    name: 'Passport',
+    short: 'Travel identity',
+    identifier: 'passportNumber',
+    person: 'name',
+    fields: [
+      'passportNumber',
+      'name',
+      'dob',
+      'sex',
+      'nationality',
+      'dateOfIssue',
+      'dateOfExpiry',
+      'placeOfBirth',
+      'placeOfIssue',
+    ],
+  },
+];
+const validationKeys = {
+  aadhaarNumber: ['aadhaarRegexValid', 'aadhaarChecksumValid'],
+  panNumber: ['panRegexValid'],
+  epicNumber: ['epicRegexValid'],
+  dlNumber: ['dlRegexValid', 'dlStateValid'],
+  cardNumber: ['rationRegexValid'],
+  passportNumber: ['passportRegexValid', 'passportChecksumValid'],
+};
+function validated(result, key) {
+  const checks = validationKeys[key] || [`${key}Valid`];
+  const existing = checks.filter((k) => k in (result.validations || {}));
+  return existing.length > 0 && existing.every((k) => result.validations[k] === true);
+}
+module.exports = { catalog, validated };

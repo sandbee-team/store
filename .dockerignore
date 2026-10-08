@@ -1,0 +1,17 @@
+.git
+.env*
+.local
+node_modules
+**/node_modules
+frontend/dist
+artifacts
+test
+test-results
+playwright-report
+docs
+**/__pycache__
+**/.venv
+*.log
+
+.agents
+.impeccable
